@@ -1,0 +1,135 @@
+
+/* Navigation */
+.main-page-header nav{
+    position: fixed;
+    padding: 20px;
+    /* background-color: rgb(220, 189, 253); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--main-font);
+    height: 8vh;
+    width: 100%;
+}
+
+/* Brand Icon */
+.main-page-logo h2{
+    font-size: 30px;
+    color: rgb(185, 32, 216);
+    letter-spacing: 3px;
+}
+
+.main-page-logo span{
+    color:rgb(255, 36, 87)
+}
+
+/* Nav Items List */
+.nav-items{
+    list-style: none;
+    display: flex;
+    font-size: 19px;
+    gap: 50px;
+    color: var(--text-color);
+}
+
+/* Nav Item */
+.main-page-header nav ul li{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main-page-header nav ul li:hover{
+    outline: 3px solid rgb(201, 25, 233);
+    outline-style: dotted;
+    transition: 0.05s ease-in;
+}
+
+/* Hamruger Button */
+.main-page-hamburger {
+    display: none;
+}
+
+
+@media screen and (max-width : 1100px) {
+    /* Nav Items List */
+    .nav-items{
+        list-style: none;
+        display: flex;
+        font-size: 17px;
+        gap: 10px;
+        color: var(--text-color);
+    }
+}
+
+@media screen and (max-width : 900px) {
+    /* Nav Items List */
+    .nav-items{
+        list-style: none;
+        display: flex;
+        font-size: 14px;
+        gap: 5px;
+        color: var(--text-color);
+    }
+}
+
+
+@media screen and (max-width : 750px) {
+    /* Nav Items List */
+    .nav-items{  
+       position: absolute;
+       left: -100%;
+       height: 92vh;
+       width: 100%;
+       top: 8vh;
+       transition: 1s;
+       font-size: 17px;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .show-mobile-items{
+        top: 8vh;
+        left: 0%;
+        height: 92vh;
+        /* background-color: rgb(25, 1, 59); */
+    }
+
+    /* Nav Item */
+    .main-page-header nav ul li{
+        list-style: none;
+        display: flex;
+        font-size: 19px;
+        gap: 50px;
+        color: rgb(147, 125, 245);
+    }
+
+    /* Hamruger Button */
+    .main-page-hamburger {
+        display: block;
+    }
+
+    .main-page-hamburger div{
+        transition: 0.1s;
+        width: 40px;
+        height: 3px;
+        background-color: rgb(65, 0, 122);
+        margin-top: 8px;
+        box-shadow: 0 0px 4px rgb(65, 0, 122);
+    }
+
+    .main-page-hamburger-close div:nth-child(2){
+        display: none;
+    }
+    .main-page-hamburger-close div:nth-child(1){
+        transform: rotate(45deg);
+        transform-origin: top left;
+    }
+    .main-page-hamburger-close div:nth-child(3){
+        margin-top: 25px;
+        transform: rotate(-45deg);
+        transform-origin: top left;
+    }
+}
